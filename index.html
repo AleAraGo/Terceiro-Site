@@ -8,39 +8,65 @@
 </head>
 
 <body>
-  <!-- DIV que será manipulada -->
     <header>
-        <!-- Div ->Tag de agrupamento de informações -->
-        <button id="container-a">Década 1990</button>
-        <button id="container-b">Década 2020</button>
+      <input type="button" value="Década de 1990" onclick="window.location.reload()" />
+      <input type="button" value="Década de 2020" onclick="viagemtemporal()"/>
     </header>
   <div id="manipula">
-    <p>Inserir um paragrafo aqui
-    </p>
-    <p class="paragrafo">Inserir um outro paragrafo aqui estará lá.
-    </p>
+    <h1>Inserir um paragrafo aqui</h1> 
   </div>
-  <!-- FIM da DIV que foi manipulada -->
+  <div id = "tv">
+    <iframe id = "xmenveio" width="420" height="310" src="https://www.youtube.com/embed/sAkL2-vh2Sk?si=gCBYnWrMu-q0BecJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    <iframe id = "jnveio" width="420" height="310" src="https://www.youtube.com/embed/ocQ4XcMnVys?si=2AhuRFGA9ZuPHgz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <iframe id = "clipeveio" width="425" height="310"  src="https://www.youtube.com/embed/amOymd1R7ag?si=OQJmIwA9_4MCxM3O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen></iframe>
 
-  <h2 class="chamada"> Altere o Texto acima clicando nos botões</h2>
-
-
+    <iframe id="pracaveia" width="420" height="309" src="https://www.youtube.com/embed/-6zm1SsvvWI?si=RQg-rCh9tK-iaQeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <!-- DIV que armazenará todos os botões -->
   <div id="botoes">
     <!-- Botão X - -->
-    <input type="button" value="X" />
-
-
+    <input id ="xmen" type="button" value="X-Men" onclick="xmen()"/>
+    <input type="button" value="Jornal Nacional" onclick="jn()" />
+    <input type="button" value="Video Clipe" onclick="clip()" />
+    <input type="button" value="A praça é Nossa" onclick="prc()" />
   </div>
   <!-- FIM da DIV que armazena todos os botões -->
 
-
-  <img id="image" src="Img/tvAntiga.png">
-
   <script> // Começa a brincadeira com JS
+
     // Botão X - xx
-    function x() {
+    function viagemtemporal() {
+      document.getElementById("xmen").onclick = jn() 
+
+    }
+    function xmen(){
+      document.getElementById("xmenveio").style.display = "block";
+      document.getElementById("jnveio").style.display = "none";
+       document.getElementById("clipeveio").style.display = "none";
+       document.getElementById("pracaveia").style.display = "none";
+    }
+  
+    function jn(){
+      document.getElementById("xmenveio").style.display = "none";
+      document.getElementById("jnveio").style.display = "block";
+      document.getElementById("clipeveio").style.display = "none";
+      document.getElementById("pracaveia").style.display = "none";
+    }
+    function clip(){
+      document.getElementById("xmenveio").style.display = "none";
+      document.getElementById("jnveio").style.display = "none";
+      document.getElementById("clipeveio").style.display = "block";
+      document.getElementById("pracaveia").style.display = "none";
+    }
+
+    function prc(){
+      document.getElementById("xmenveio").style.display = "none";
+      document.getElementById("jnveio").style.display = "none";
+      document.getElementById("clipeveio").style.display = "none";
+      document.getElementById("pracaveia").style.display = "block";
 
     }
     //fim do Botão X

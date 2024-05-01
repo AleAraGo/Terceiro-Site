@@ -1,8 +1,5 @@
-body{
-    /**/
+ body{   
     background-color :rgb(153, 153, 210);
-    /**/
-    /*Cobrir todo o fundo da tela com a mesma imagem*/
 }
 header{
     width: 100%;
@@ -12,11 +9,44 @@ header{
 }
 #container-a{
     background-color:red;
+    color: white;
 }
-/* #container-b{
-    background-color:silver;
-    margin-left: 1300px;
-} */
+#container-b{
+    background-color:blue;
+    color:white;
+}
 #manipula{
-    color:aliceblue
+    display: flex;
+    justify-content: center;
+    color:blue
+}
+#tv{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(Img/tvAntiga.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px;
+}
+#xmenveio{
+    display: none;
+    margin-top: 75px;
+}
+#jnveio{
+    display: none;
+    margin-top: 75px;
+}
+#clipeveio{
+    display: none;
+    margin-top: 75px;
+}
+#pracaveia{
+    display: none;
+    margin-top: 75px;
+}
+#botoes{
+    display: flex;
+    justify-content: center;   
 }
